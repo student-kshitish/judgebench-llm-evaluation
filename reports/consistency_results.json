@@ -1,0 +1,148 @@
+{
+  "experiment": "Repeated-Judgment Consistency",
+  "model": "llama3.2:3b",
+  "judge_temperature": 0.0,
+  "cases_requested": 3,
+  "repetitions_per_case": 3,
+  "requested_judgments": 9,
+  "successful_judgments": 9,
+  "failed_judgments": 0,
+  "judgment_success_rate": 1.0,
+  "overall_winner_counts": {
+    "A": 9
+  },
+  "mean_winner_consistency_vs_first_run": 1.0,
+  "mean_winner_consistency_vs_modal_winner": 1.0,
+  "score_statistics": {
+    "A": {
+      "mean": 4.466666666666667,
+      "population_stddev": 0.0235702260395515,
+      "observations": 9
+    },
+    "B": {
+      "mean": 3.011111111111111,
+      "population_stddev": 1.0224637395846523,
+      "observations": 9
+    }
+  },
+  "errors": [],
+  "case_results": [
+    {
+      "case_id": "capital_001",
+      "requested_repetitions": 3,
+      "successful_repetitions": 3,
+      "failed_repetitions": 0,
+      "winner_counts": {
+        "A": 3
+      },
+      "modal_winner": "A",
+      "winner_consistency_vs_first_run": 1.0,
+      "winner_consistency_vs_modal_winner": 1.0,
+      "score_statistics": {
+        "A_mean": 4.45,
+        "A_population_stddev": 0.0,
+        "B_mean": 4.3,
+        "B_population_stddev": 0.0
+      },
+      "runs": [
+        {
+          "repetition": 1,
+          "winner": "A",
+          "score_a": 4.45,
+          "score_b": 4.3
+        },
+        {
+          "repetition": 2,
+          "winner": "A",
+          "score_a": 4.45,
+          "score_b": 4.3
+        },
+        {
+          "repetition": 3,
+          "winner": "A",
+          "score_a": 4.45,
+          "score_b": 4.3
+        }
+      ]
+    },
+    {
+      "case_id": "math_001",
+      "requested_repetitions": 3,
+      "successful_repetitions": 3,
+      "failed_repetitions": 0,
+      "winner_counts": {
+        "A": 3
+      },
+      "modal_winner": "A",
+      "winner_consistency_vs_first_run": 1.0,
+      "winner_consistency_vs_modal_winner": 1.0,
+      "score_statistics": {
+        "A_mean": 4.5,
+        "A_population_stddev": 0.0,
+        "B_mean": 2.933333333333333,
+        "B_population_stddev": 0.04714045207910321
+      },
+      "runs": [
+        {
+          "repetition": 1,
+          "winner": "A",
+          "score_a": 4.5,
+          "score_b": 3.0
+        },
+        {
+          "repetition": 2,
+          "winner": "A",
+          "score_a": 4.5,
+          "score_b": 2.9
+        },
+        {
+          "repetition": 3,
+          "winner": "A",
+          "score_a": 4.5,
+          "score_b": 2.9
+        }
+      ]
+    },
+    {
+      "case_id": "instruction_001",
+      "requested_repetitions": 3,
+      "successful_repetitions": 3,
+      "failed_repetitions": 0,
+      "winner_counts": {
+        "A": 3
+      },
+      "modal_winner": "A",
+      "winner_consistency_vs_first_run": 1.0,
+      "winner_consistency_vs_modal_winner": 1.0,
+      "score_statistics": {
+        "A_mean": 4.45,
+        "A_population_stddev": 0.0,
+        "B_mean": 1.8,
+        "B_population_stddev": 0.0
+      },
+      "runs": [
+        {
+          "repetition": 1,
+          "winner": "A",
+          "score_a": 4.45,
+          "score_b": 1.8
+        },
+        {
+          "repetition": 2,
+          "winner": "A",
+          "score_a": 4.45,
+          "score_b": 1.8
+        },
+        {
+          "repetition": 3,
+          "winner": "A",
+          "score_a": 4.45,
+          "score_b": 1.8
+        }
+      ]
+    }
+  ],
+  "model_calls": 12,
+  "total_duration_ns": 137966476879,
+  "interpretation_note": "Consistency measures repeatability, not correctness. Repeated calls may share deterministic settings or correlated errors. Results are limited by the size and composition of the test suite."
+}
