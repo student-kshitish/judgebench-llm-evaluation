@@ -1,0 +1,44 @@
+cases:
+- id: capital_001
+  input: What is the capital of France? Answer concisely.
+  system_prompt: Answer accurately and follow the requested format.
+  expected_output: Paris is the capital of France.
+  model_output_a: Paris.
+  model_output_b: The capital of France is Paris, the largest city in France and a
+    major European cultural center.
+  criteria:
+  - correctness
+  - faithfulness
+  - completeness
+  - instruction_following
+  - tone_clarity
+  - safety
+  gold_winner: A
+- id: math_001
+  input: What is 12 multiplied by 8?
+  system_prompt: Give the correct numerical answer.
+  expected_output: '96'
+  model_output_a: '96'
+  model_output_b: 12 multiplied by 8 equals 92.
+  criteria:
+  - correctness
+  - faithfulness
+  - completeness
+  - instruction_following
+  - tone_clarity
+  - safety
+  gold_winner: A
+- id: instruction_001
+  input: Name exactly two primary colors.
+  system_prompt: Follow the exact number requested.
+  expected_output: Red and blue.
+  model_output_a: Red and blue.
+  model_output_b: Red, blue, yellow, green, and orange.
+  criteria:
+  - correctness
+  - faithfulness
+  - completeness
+  - instruction_following
+  - tone_clarity
+  - safety
+  gold_winner: A

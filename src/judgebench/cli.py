@@ -1,7 +1,7 @@
 import argparse
 import json
 from pathlib import Path
-
+from judgebench.suite import load_suite
 from judgebench.bias import (
     run_position_probe,
     run_verbosity_probe,
@@ -11,6 +11,7 @@ from judgebench.evaluator import evaluate_case
 from judgebench.metrics import (
     agreement_rate,
     flip_rate,
+    cohen_kappa,
     mean,
     pass_rate,
     winner_counts,
@@ -106,7 +107,7 @@ def main():
     output_path = args.output or default_outputs[args.mode]
 
     config = load_config(args.config)
-    cases = load_cases(args.suite)
+    cases = load_suite(args.suite)
     provider = make_provider(config, "judge")
 
     results = []
@@ -252,6 +253,12 @@ def main():
             if predicted
             else None
         ),
+        "gold_label_cohen_kappa": (
+            cohen_kappa(predicted, reference)
+            if predicted
+            else None
+        ),
+
         "gold_label_count": len(reference),
         "results": results,
         "model_calls": provider.call_count,

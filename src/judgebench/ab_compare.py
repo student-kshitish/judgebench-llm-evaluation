@@ -2,7 +2,7 @@ import argparse
 import json
 from pathlib import Path
 from statistics import mean
-
+from judgebench.suite import load_suite
 from judgebench.config import load_config
 from judgebench.evaluator import evaluate_case
 from judgebench.providers import OllamaProvider
@@ -243,7 +243,7 @@ def main():
     config_b = load_config(args.config_b)
     judge_config = load_config(args.judge_config)
 
-    cases = load_cases(args.suite)
+    cases = load_suite(args.suite)
 
     generator_a = make_provider(config_a, "generator")
     generator_b = make_provider(config_b, "generator")
