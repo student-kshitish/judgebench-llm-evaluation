@@ -1,0 +1,81 @@
+{
+  "experiment": "LLM-as-Judge A/B Configuration Comparison",
+  "total_cases": 3,
+  "successful_cases": 3,
+  "failed_cases": 0,
+  "failures": [],
+  "configuration_a": {
+    "model": "llama3.2:3b",
+    "mean_judge_score": 4.683333333333334,
+    "answers_scored": 3
+  },
+  "configuration_b": {
+    "model": "llama3.2:3b",
+    "mean_judge_score": 3.4833333333333334,
+    "answers_scored": 3
+  },
+  "overall_winner": "A",
+  "tie_margin": 0.05,
+  "results": [
+    {
+      "case_id": "capital_001",
+      "configuration_a": {
+        "model": "llama3.2:3b",
+        "answer": "Paris.",
+        "score": 4.8,
+        "prompt_tokens": 57,
+        "completion_tokens": 3
+      },
+      "configuration_b": {
+        "model": "llama3.2:3b",
+        "answer": "Paris.",
+        "score": 3.45,
+        "prompt_tokens": 57,
+        "completion_tokens": 3
+      },
+      "case_winner": "A",
+      "judge_rationale": "Candidate A's answer is more accurate, comprehensive, and clear than candidate B's answer."
+    },
+    {
+      "case_id": "math_001",
+      "configuration_a": {
+        "model": "llama3.2:3b",
+        "answer": "96",
+        "score": 4.8,
+        "prompt_tokens": 52,
+        "completion_tokens": 2
+      },
+      "configuration_b": {
+        "model": "llama3.2:3b",
+        "answer": "96",
+        "score": 3.55,
+        "prompt_tokens": 52,
+        "completion_tokens": 2
+      },
+      "case_winner": "A",
+      "judge_rationale": "Candidate A's answer is more accurate and complete than Candidate B's answer."
+    },
+    {
+      "case_id": "instruction_001",
+      "configuration_a": {
+        "model": "llama3.2:3b",
+        "answer": "Red and Blue",
+        "score": 4.45,
+        "prompt_tokens": 49,
+        "completion_tokens": 4
+      },
+      "configuration_b": {
+        "model": "llama3.2:3b",
+        "answer": "Red and Blue.",
+        "score": 3.45,
+        "prompt_tokens": 49,
+        "completion_tokens": 5
+      },
+      "case_winner": "A",
+      "judge_rationale": "Candidate A's answer is more complete and accurate than candidate B's answer, therefore it is the winner."
+    }
+  ],
+  "generator_a_calls": 3,
+  "generator_b_calls": 3,
+  "judge_calls": 4
+}

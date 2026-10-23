@@ -1,0 +1,25 @@
+ollama:
+  base_url: "http://localhost:11434"
+  timeout_seconds: 180
+
+generator:
+  provider: "ollama"
+  model: "llama3.2:3b"
+  temperature: 0.0
+
+judge:
+  provider: "ollama"
+  model: "llama3.2:3b"
+  temperature: 0.0
+
+evaluation:
+  pass_threshold: 3.5
+  score_scale_min: 1
+  score_scale_max: 5
+  repeat_count: 3
+
+logging:
+  directory: "logs"
+
+reports:
+  directory: "reports"
