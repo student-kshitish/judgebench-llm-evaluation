@@ -1,0 +1,47 @@
+{
+  "model": "llama3.2:3b",
+  "suite": "data/suite.json",
+  "mode": "position",
+  "total_cases": 3,
+  "attempted_operations": 3,
+  "successful_evaluations": 3,
+  "failed_operations": [],
+  "operation_success_rate": 1.0,
+  "mean_candidate_score": 0.0,
+  "pass_rate": 0.0,
+  "winner_counts": {
+    "A": 0,
+    "B": 0,
+    "tie": 0
+  },
+  "position_flip_rate": 0.3333333333333333,
+  "position_cases_tested": 3,
+  "position_results": [
+    {
+      "case_id": "capital_001",
+      "original_winner": "A",
+      "reversed_winner_mapped_back": "B",
+      "position_flip": true
+    },
+    {
+      "case_id": "math_001",
+      "original_winner": "A",
+      "reversed_winner_mapped_back": "A",
+      "position_flip": false
+    },
+    {
+      "case_id": "instruction_001",
+      "original_winner": "A",
+      "reversed_winner_mapped_back": "A",
+      "position_flip": false
+    }
+  ],
+  "mean_verbosity_score_change": 0.0,
+  "verbosity_cases_tested": 0,
+  "verbosity_results": [],
+  "gold_label_agreement": null,
+  "gold_label_count": 0,
+  "results": [],
+  "model_calls": 8,
+  "total_duration_ns": 63846687877
+}

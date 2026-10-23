@@ -1,0 +1,16 @@
+{
+  "labels": [
+    {
+      "case_id": "capital_001",
+      "human_winner": "A"
+    },
+    {
+      "case_id": "math_001",
+      "human_winner": "A"
+    },
+    {
+      "case_id": "instruction_001",
+      "human_winner": "A"
+    }
+  ]
+}

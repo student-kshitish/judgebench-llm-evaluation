@@ -1,0 +1,42 @@
+{
+  "model": "llama3.2:3b",
+  "suite": "data/suite.json",
+  "mode": "verbosity",
+  "total_cases": 3,
+  "successful_evaluations": 0,
+  "failed_operations": [],
+  "mean_candidate_score": 0.0,
+  "pass_rate": 0.0,
+  "winner_counts": {
+    "A": 0,
+    "B": 0,
+    "tie": 0
+  },
+  "position_flip_rate": 0.0,
+  "position_results": [],
+  "verbosity_results": [
+    {
+      "case_id": "capital_001",
+      "baseline_score": 4.45,
+      "padded_score": 4.45,
+      "score_change": 0.0
+    },
+    {
+      "case_id": "math_001",
+      "baseline_score": 4.5,
+      "padded_score": 4.5,
+      "score_change": 0.0
+    },
+    {
+      "case_id": "instruction_001",
+      "baseline_score": 4.45,
+      "padded_score": 4.75,
+      "score_change": 0.2999999999999998
+    }
+  ],
+  "gold_label_agreement": null,
+  "gold_label_count": 0,
+  "results": [],
+  "model_calls": 7,
+  "total_duration_ns": 56540472709
+}
