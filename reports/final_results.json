@@ -1,0 +1,335 @@
+{
+  "model": "llama3.2:3b",
+  "suite": "data/suite.json",
+  "mode": "all",
+  "total_cases": 3,
+  "attempted_operations": 9,
+  "successful_evaluations": 9,
+  "failed_operations": [],
+  "operation_success_rate": 1.0,
+  "mean_candidate_score": 3.783333333333333,
+  "pass_rate": 0.6666666666666666,
+  "winner_counts": {
+    "A": 2,
+    "B": 0,
+    "tie": 1
+  },
+  "position_flip_rate": 0.3333333333333333,
+  "position_cases_tested": 3,
+  "position_results": [
+    {
+      "case_id": "capital_001",
+      "original_winner": "tie",
+      "reversed_winner_mapped_back": "B",
+      "position_flip": true
+    },
+    {
+      "case_id": "math_001",
+      "original_winner": "A",
+      "reversed_winner_mapped_back": "A",
+      "position_flip": false
+    },
+    {
+      "case_id": "instruction_001",
+      "original_winner": "A",
+      "reversed_winner_mapped_back": "A",
+      "position_flip": false
+    }
+  ],
+  "mean_verbosity_score_change": 0.06666666666666672,
+  "verbosity_cases_tested": 3,
+  "verbosity_results": [
+    {
+      "case_id": "capital_001",
+      "baseline_score": 4.45,
+      "padded_score": 4.45,
+      "score_change": 0.0
+    },
+    {
+      "case_id": "math_001",
+      "baseline_score": 4.6,
+      "padded_score": 4.5,
+      "score_change": -0.09999999999999964
+    },
+    {
+      "case_id": "instruction_001",
+      "baseline_score": 4.45,
+      "padded_score": 4.75,
+      "score_change": 0.2999999999999998
+    }
+  ],
+  "gold_label_agreement": 0.6666666666666666,
+  "gold_label_cohen_kappa": 0.0,
+  "gold_label_count": 3,
+  "results": [
+    {
+      "case_id": "capital_001",
+      "verdict": {
+        "case_id": "capital_001",
+        "winner": "tie",
+        "scores": {
+          "A": {
+            "correctness": {
+              "score": 5,
+              "rationale": "The answer directly states the capital of France, which is a factual claim.",
+              "evidence": "Paris is the capital of France."
+            },
+            "faithfulness": {
+              "score": 4,
+              "rationale": "While the answer mentions Paris as the capital, it does not provide any additional context or evidence to support this claim.",
+              "evidence": "No specific evidence provided"
+            },
+            "completeness": {
+              "score": 3,
+              "rationale": "The answer only provides a single piece of information about the capital of France, which is incomplete compared to other possible answers.",
+              "evidence": "Answer does not provide additional context or details."
+            },
+            "instruction_following": {
+              "score": 5,
+              "rationale": "The answer follows the requested format and provides a clear response to the question.",
+              "evidence": "Answer starts with 'What is the capital of France?'"
+            },
+            "tone_clarity": {
+              "score": 4,
+              "rationale": "The answer is clear and concise, but could benefit from more descriptive language.",
+              "evidence": "Answer uses simple language to convey information."
+            },
+            "safety": {
+              "score": 5,
+              "rationale": "There are no safety concerns in this answer.",
+              "evidence": "No potential hazards or risks mentioned"
+            }
+          },
+          "B": {
+            "correctness": {
+              "score": 4,
+              "rationale": "The answer provides additional context about Paris being the capital of France, which supports the factual claim.",
+              "evidence": "Answer mentions Paris as the largest city in France."
+            },
+            "faithfulness": {
+              "score": 5,
+              "rationale": "The answer provides evidence to support the claim that Paris is the capital of France.",
+              "evidence": "Answer quotes or identifies supporting evidence from 'Paris is the capital of France'."
+            },
+            "completeness": {
+              "score": 4,
+              "rationale": "The answer provides more context and information about the capital of France, making it a more complete response.",
+              "evidence": "Answer mentions Paris as a major European cultural center."
+            },
+            "instruction_following": {
+              "score": 5,
+              "rationale": "The answer follows the requested format and provides a clear response to the question.",
+              "evidence": "Answer starts with 'What is the capital of France?'"
+            },
+            "tone_clarity": {
+              "score": 4,
+              "rationale": "The answer is clear and concise, but could benefit from more descriptive language.",
+              "evidence": "Answer uses simple language to convey information."
+            },
+            "safety": {
+              "score": 5,
+              "rationale": "There are no safety concerns in this answer.",
+              "evidence": "No potential hazards or risks mentioned"
+            }
+          }
+        },
+        "overall_score": {
+          "A": 4.45,
+          "B": 4.5
+        },
+        "decision_rationale": "Candidate A's answer is more accurate and provides additional context, making it the winning answer.",
+        "confidence": 0.9,
+        "flags": []
+      },
+      "calculated_scores": {
+        "A": 4.45,
+        "B": 4.5
+      },
+      "model": "llama3.2:3b",
+      "attempts": 2,
+      "prompt_tokens": 1426,
+      "completion_tokens": 742,
+      "duration_ns": 11864861714
+    },
+    {
+      "case_id": "math_001",
+      "verdict": {
+        "case_id": "math_001",
+        "winner": "A",
+        "scores": {
+          "A": {
+            "correctness": {
+              "score": 5,
+              "rationale": "The answer 96 is correct because it matches the reference information.",
+              "evidence": "Reference information: 12 multiplied by 8 equals 96."
+            },
+            "faithfulness": {
+              "score": 4,
+              "rationale": "The answer 96 is faithful to the mathematical operation of multiplication.",
+              "evidence": "Mathematical operation: Multiplication is a fundamental operation in mathematics that involves repeated addition."
+            },
+            "completeness": {
+              "score": 5,
+              "rationale": "The answer 96 covers all important parts of the question, including the correct result of the multiplication.",
+              "evidence": "Question: What is 12 multiplied by 8?"
+            },
+            "instruction_following": {
+              "score": 4,
+              "rationale": "The answer follows the instructions provided in the system instructions.",
+              "evidence": "System instructions: Give the correct numerical answer."
+            },
+            "tone_clarity": {
+              "score": 5,
+              "rationale": "The answer is clear and concisely presented, making it easy to understand.",
+              "evidence": "Answer: 96"
+            },
+            "safety": {
+              "score": 4,
+              "rationale": "The answer does not pose any safety risks or concerns.",
+              "evidence": "None"
+            }
+          },
+          "B": {
+            "correctness": {
+              "score": 2,
+              "rationale": "The answer 92 is incorrect because it does not match the reference information.",
+              "evidence": "Reference information: 12 multiplied by 8 equals 96."
+            },
+            "faithfulness": {
+              "score": 3,
+              "rationale": "The answer 92 is partially faithful to the mathematical operation of multiplication, but it is not entirely correct.",
+              "evidence": "Mathematical operation: Multiplication is a fundamental operation in mathematics that involves repeated addition."
+            },
+            "completeness": {
+              "score": 3,
+              "rationale": "The answer 92 does not cover all important parts of the question, specifically the correct result of the multiplication.",
+              "evidence": "Question: What is 12 multiplied by 8?"
+            },
+            "instruction_following": {
+              "score": 4,
+              "rationale": "The answer follows the instructions provided in the system instructions.",
+              "evidence": "System instructions: Give the correct numerical answer."
+            },
+            "tone_clarity": {
+              "score": 3,
+              "rationale": "The answer is somewhat clear, but it could be more concise and easy to understand.",
+              "evidence": "Answer: 92"
+            },
+            "safety": {
+              "score": 4,
+              "rationale": "The answer does not pose any safety risks or concerns.",
+              "evidence": "None"
+            }
+          }
+        },
+        "overall_score": {
+          "A": 4.5,
+          "B": 3.0
+        },
+        "decision_rationale": "Candidate A's answer is correct and more faithful to the mathematical operation, making it the winner.",
+        "confidence": 0.9,
+        "flags": []
+      },
+      "calculated_scores": {
+        "A": 4.5,
+        "B": 3.0
+      },
+      "model": "llama3.2:3b",
+      "attempts": 1,
+      "prompt_tokens": 1021,
+      "completion_tokens": 734,
+      "duration_ns": 12029173455
+    },
+    {
+      "case_id": "instruction_001",
+      "verdict": {
+        "case_id": "instruction_001",
+        "winner": "A",
+        "scores": {
+          "A": {
+            "correctness": {
+              "score": 5,
+              "rationale": "The answer provides the exact primary colors as requested.",
+              "evidence": "The answer states 'Red and blue.'"
+            },
+            "faithfulness": {
+              "score": 4,
+              "rationale": "The answer does not provide any additional information that is not supported by the reference information.",
+              "evidence": "The answer only mentions primary colors."
+            },
+            "completeness": {
+              "score": 3,
+              "rationale": "The answer does not cover all important parts of the question, as it does not mention yellow or orange.",
+              "evidence": "The answer only mentions two primary colors."
+            },
+            "instruction_following": {
+              "score": 5,
+              "rationale": "The answer follows the exact number requested in the instruction.",
+              "evidence": "The answer states 'Name exactly two primary colors.'"
+            },
+            "tone_clarity": {
+              "score": 4,
+              "rationale": "The answer is clear and easy to understand, but could be more concise.",
+              "evidence": "The answer uses simple language."
+            },
+            "safety": {
+              "score": 5,
+              "rationale": "There are no safety concerns in the answer.",
+              "evidence": "None"
+            }
+          },
+          "B": {
+            "correctness": {
+              "score": 1,
+              "rationale": "The answer does not provide the correct primary colors, as it includes additional colors.",
+              "evidence": "The answer states 'Red, blue, yellow, green, and orange.'"
+            },
+            "faithfulness": {
+              "score": 2,
+              "rationale": "The answer does not fully support the reference information, as it includes extra colors.",
+              "evidence": "The answer does not mention primary colors only."
+            },
+            "completeness": {
+              "score": 1,
+              "rationale": "The answer does not cover all important parts of the question, as it includes additional colors.",
+              "evidence": "The answer includes extra colors."
+            },
+            "instruction_following": {
+              "score": 2,
+              "rationale": "The answer does not follow the exact number requested in the instruction.",
+              "evidence": "The answer includes more than two colors."
+            },
+            "tone_clarity": {
+              "score": 3,
+              "rationale": "The answer is somewhat clear, but could be improved with more concise language.",
+              "evidence": "The answer uses some complex sentences."
+            },
+            "safety": {
+              "score": 4,
+              "rationale": "There are some safety concerns in the answer, as it includes extra colors that may not be safe to use.",
+              "evidence": "The answer includes yellow and orange, which may not be primary colors."
+            }
+          }
+        },
+        "overall_score": {
+          "A": 4.45,
+          "B": 1.8
+        },
+        "decision_rationale": "Candidate A provides a more accurate and complete answer than Candidate B.",
+        "confidence": 0.9,
+        "flags": []
+      },
+      "calculated_scores": {
+        "A": 4.45,
+        "B": 1.8
+      },
+      "model": "llama3.2:3b",
+      "attempts": 1,
+      "prompt_tokens": 1024,
+      "completion_tokens": 717,
+      "duration_ns": 11805448353
+    }
+  ],
+  "model_calls": 19,
+  "total_duration_ns": 223741050050
+}

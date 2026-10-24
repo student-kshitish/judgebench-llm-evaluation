@@ -7,19 +7,19 @@
   "successful_evaluations": 9,
   "failed_operations": [],
   "operation_success_rate": 1.0,
-  "mean_candidate_score": 3.75,
+  "mean_candidate_score": 3.783333333333333,
   "pass_rate": 0.6666666666666666,
   "winner_counts": {
-    "A": 3,
+    "A": 2,
     "B": 0,
-    "tie": 0
+    "tie": 1
   },
   "position_flip_rate": 0.3333333333333333,
   "position_cases_tested": 3,
   "position_results": [
     {
       "case_id": "capital_001",
-      "original_winner": "A",
+      "original_winner": "tie",
       "reversed_winner_mapped_back": "B",
       "position_flip": true
     },
@@ -58,14 +58,15 @@
       "score_change": 0.2999999999999998
     }
   ],
-  "gold_label_agreement": 1.0,
+  "gold_label_agreement": 0.6666666666666666,
+  "gold_label_cohen_kappa": 0.0,
   "gold_label_count": 3,
   "results": [
     {
       "case_id": "capital_001",
       "verdict": {
         "case_id": "capital_001",
-        "winner": "A",
+        "winner": "tie",
         "scores": {
           "A": {
             "correctness": {
@@ -80,75 +81,75 @@
             },
             "completeness": {
               "score": 3,
-              "rationale": "The answer only provides the name of the city without mentioning its status as the capital of France.",
-              "evidence": "Answer: 'Paris.'"
+              "rationale": "The answer only provides a single piece of information about the capital of France, which is incomplete compared to other possible answers.",
+              "evidence": "Answer does not provide additional context or details."
             },
             "instruction_following": {
               "score": 5,
-              "rationale": "The answer follows the requested format and is concise.",
-              "evidence": "Answer: Paris."
+              "rationale": "The answer follows the requested format and provides a clear response to the question.",
+              "evidence": "Answer starts with 'What is the capital of France?'"
             },
             "tone_clarity": {
               "score": 4,
-              "rationale": "The answer is clear and directly states the capital of France, but could be more informative.",
-              "evidence": "Answer: 'Paris.'"
+              "rationale": "The answer is clear and concise, but could benefit from more descriptive language.",
+              "evidence": "Answer uses simple language to convey information."
             },
             "safety": {
               "score": 5,
               "rationale": "There are no safety concerns in this answer.",
-              "evidence": "None provided"
+              "evidence": "No potential hazards or risks mentioned"
             }
           },
           "B": {
             "correctness": {
               "score": 4,
-              "rationale": "The answer provides additional context about Paris being the largest city and a major European cultural center, which supports the claim that it is the capital of France.",
-              "evidence": "Answer: 'The capital of France is Paris, the largest city in France and a major European cultural center.'"
+              "rationale": "The answer provides additional context about Paris being the capital of France, which supports the factual claim.",
+              "evidence": "Answer mentions Paris as the largest city in France."
             },
             "faithfulness": {
-              "score": 4,
+              "score": 5,
               "rationale": "The answer provides evidence to support the claim that Paris is the capital of France.",
-              "evidence": "Answer: 'Paris is the capital of France.'"
+              "evidence": "Answer quotes or identifies supporting evidence from 'Paris is the capital of France'."
             },
             "completeness": {
-              "score": 5,
-              "rationale": "The answer provides a clear and complete explanation of why Paris is the capital of France.",
-              "evidence": "Answer: 'The capital of France is Paris, the largest city in France and a major European cultural center.'"
+              "score": 4,
+              "rationale": "The answer provides more context and information about the capital of France, making it a more complete response.",
+              "evidence": "Answer mentions Paris as a major European cultural center."
             },
             "instruction_following": {
-              "score": 4,
-              "rationale": "The answer follows the requested format, but could be more concise.",
-              "evidence": "Answer: The capital of France is Paris, the largest city in France and a major European cultural center."
+              "score": 5,
+              "rationale": "The answer follows the requested format and provides a clear response to the question.",
+              "evidence": "Answer starts with 'What is the capital of France?'"
             },
             "tone_clarity": {
-              "score": 5,
-              "rationale": "The answer is clear and well-structured, making it easy to understand.",
-              "evidence": "Answer: 'The capital of France is Paris, the largest city in France and a major European cultural center.'"
+              "score": 4,
+              "rationale": "The answer is clear and concise, but could benefit from more descriptive language.",
+              "evidence": "Answer uses simple language to convey information."
             },
             "safety": {
               "score": 5,
               "rationale": "There are no safety concerns in this answer.",
-              "evidence": "None provided"
+              "evidence": "No potential hazards or risks mentioned"
             }
           }
         },
         "overall_score": {
           "A": 4.45,
-          "B": 4.3
+          "B": 4.5
         },
-        "decision_rationale": "Candidate A's answer is more concise and directly states the capital of France, while Candidate B provides additional context but could be more informative.",
-        "confidence": 0.8,
+        "decision_rationale": "Candidate A's answer is more accurate and provides additional context, making it the winning answer.",
+        "confidence": 0.9,
         "flags": []
       },
       "calculated_scores": {
         "A": 4.45,
-        "B": 4.3
+        "B": 4.5
       },
       "model": "llama3.2:3b",
       "attempts": 2,
       "prompt_tokens": 1426,
-      "completion_tokens": 774,
-      "duration_ns": 8532836597
+      "completion_tokens": 742,
+      "duration_ns": 8140776669
     },
     {
       "case_id": "math_001",
@@ -237,7 +238,7 @@
       "attempts": 1,
       "prompt_tokens": 1021,
       "completion_tokens": 734,
-      "duration_ns": 8279342345
+      "duration_ns": 8264675514
     },
     {
       "case_id": "instruction_001",
@@ -326,9 +327,9 @@
       "attempts": 1,
       "prompt_tokens": 1024,
       "completion_tokens": 717,
-      "duration_ns": 8098357919
+      "duration_ns": 8093202266
     }
   ],
   "model_calls": 19,
-  "total_duration_ns": 151256492212
+  "total_duration_ns": 153791223871
 }
